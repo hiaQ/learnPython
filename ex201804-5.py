@@ -9,8 +9,11 @@ class Student(object):
 	def __getattr__(self,attr):
 		if attr == 'age':
 			return lambda:25
+		else:
+			raise AttributeError('\'Student\' object has no attribute \'%s\'' % attr)
 
 s = Student()
 print(s.name) 
 #注意函数的调用方式
 print(s.age()) 
+print(s.abc) 

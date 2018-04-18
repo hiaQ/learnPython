@@ -1,13 +1,17 @@
 #!/user/bin/env python3
 #coding:utf-8
-#err_raise
-class FooError(ValueError):
-	pass
-
+#err_reraise
 def foo(s):
 	n = int(s)
 	if n == 0:
-		raise FooError('Invalid value: %s' % s)
-	return 10/n
+		raise ValueError('invalid value: %s' %s)
+	raise 10 / n 
 
-print(foo('0'))
+def bar():
+	try:
+		foo('0')
+	except ValueError as e:
+		print('ValueError!')
+		raise
+
+bar()

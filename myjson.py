@@ -14,3 +14,5 @@ def student2dict(std):
 
 s = Student('Bob',20,88)
 print(json.dumps(s, default = student2dict)) 
+#给类序列化的另一种方法__dict__
+print(json.dumps(s,default = lambda obj:obj.__dict__))

@@ -32,7 +32,7 @@ class LastUpdatedOrderedDict(OrderedDict):
 
 if __name__ == '__main__':
 	fifo = LastUpdatedOrderedDict(3)
-	fifo['x'] = 1
+	fifo['x'] = 1 
 	fifo['y'] = 2
 	fifo['z'] = 3
 	fifo['a'] = 4

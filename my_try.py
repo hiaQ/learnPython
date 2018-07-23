@@ -14,4 +14,4 @@ def main():
 	finally:
 		print('finally...')
 
-main() 
+main()
